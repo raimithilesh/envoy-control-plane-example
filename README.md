@@ -51,10 +51,10 @@ To verify changes, you can navigate to envoy admin interface:
 git clone git@github.com:raimithilesh/envoy-control-plane-example.git
 ```
 
-  - start up docker-compose and scale the `test-server-dev` and `test-server-prod` to 3 instances
+  - start up docker-compose and scale the `test-server-dev` to 3 instances
 
 ```bash
-docker-compose up -d --scale test-server-prod=3 --scale test-server-dev=3 --no-recreate
+docker-compose up -d --scale test-server-dev=3 --no-recreate
 ```
 
   - run `docker-compose ps` to see all the running instances, we should have 8 containers running
