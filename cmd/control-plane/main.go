@@ -5,8 +5,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/mnaboka/envoy-control-plane-example/pkg/api"
-	"github.com/mnaboka/envoy-control-plane-example/pkg/envoy"
+	"github.com/raimithilesh/envoy-control-plane-example/pkg/api"
+	"github.com/raimithilesh/envoy-control-plane-example/pkg/envoy"
 
 	envoyapi "github.com/envoyproxy/go-control-plane/envoy/api/v2"
 	xds "github.com/envoyproxy/go-control-plane/pkg/server"
