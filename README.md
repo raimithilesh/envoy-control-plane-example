@@ -78,9 +78,9 @@ envoy-control-plane-example_test-server-prod_3   /go/bin/server                 
   
 ```bash
 $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' envoy-control-plane-example_test-server-dev_1 envoy-control-plane-example_test-server-dev_2 envoy-control-plane-example_test-server-dev_3
-192.168.240.7
-192.168.240.4
-192.168.240.8
+172.29.0.4
+172.29.0.5
+172.29.0.6
 ```
 
   - create a new envoy cluster called "dev" with provided `cli.sh`
@@ -88,31 +88,31 @@ $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' e
 $ ./cli.sh cluster add dev /dev
 
 HTTP/1.1 200 OK
-Date: Wed, 18 Sep 2019 00:46:09 GMT
+Date: Mon, 12 Jul 2021 15:35:11 GMT
 Content-Length: 0
 
 $ ./cli.sh endpoint add dev 192.168.240.7 8080
 
 HTTP/1.1 200 OK
-Date: Wed, 18 Sep 2019 00:46:27 GMT
+Date: Mon, 12 Jul 2021 15:39:19 GMT
 Content-Length: 0
 
 $ ./cli.sh endpoint add dev 192.168.240.4 8080
 
 HTTP/1.1 200 OK
-Date: Wed, 18 Sep 2019 00:46:32 GMT
+Date: Mon, 12 Jul 2021 15:45:33 GMT
 Content-Length: 0
 
 $ ./cli.sh endpoint add dev 192.168.240.8 8080
 
 HTTP/1.1 200 OK
-Date: Wed, 18 Sep 2019 00:46:38 GMT
+Date: Mon, 12 Jul 2021 15:49:21 GMT
 Content-Length: 0
 
 $ ./cli.sh commit
 
 HTTP/1.1 200 OK
-Date: Wed, 18 Sep 2019 00:47:59 GMT
+Date: Mon, 12 Jul 2021 15:56:13 GMT
 Content-Length: 0
 ```
 
