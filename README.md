@@ -11,7 +11,7 @@ More details [here](https://www.envoyproxy.io/docs/envoy/latest/configuration/ov
 docker-compose contains the following containers:
   - `control-plane` - implementation of xDS server. It listens for xDS DiscoveryRequests on port `:5678`
     and exposes REST API on port `8000` to dynamically add/remove clusters and endpoints(upstreams).
-    CLI script contains examples how to interact with REST API [cli.sh](https://github.com/mnaboka/envoy-control-plane-example/blob/master/cli.sh)
+    CLI script contains examples how to interact with REST API [cli.sh](https://github.com/raimithilesh/envoy-control-plane-example/blob/master/cli.sh)
 
   - `envoy` - is an official image of envoy v1.11.1, it exposes admin interface on port `:9901` and HTTP1 listener on `:3000`
   - `test-server-dev` and `test-server-prod` simple HTTP servers listens on `:8080` and returns info about server (hostname, ip address etc.)
@@ -48,7 +48,7 @@ To verify changes, you can navigate to envoy admin interface:
   - start with cloning this repo on a local machine
 
 ```bash
-git clone git@github.com:mnaboka/envoy-control-plane-example.git
+git clone git@github.com:raimithilesh/envoy-control-plane-example.git
 ```
 
   - start up docker-compose and scale the `test-server-dev` and `test-server-prod` to 3 instances
