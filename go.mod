@@ -1,4 +1,4 @@
-module github.com/mnaboka/envoy-control-plane-example
+module github.com/raimithilesh/envoy-control-plane-example
 
 go 1.12
 
